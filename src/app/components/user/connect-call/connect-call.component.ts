@@ -37,7 +37,7 @@ export class ConnectCallComponent implements OnInit, OnDestroy {
       this.appConfig.config = this.appConfig.config
       this.ownerId = this.appConfig.config?.ownerId;
       this.groupId = this.appConfig.config?.groupId;
-      this.timeoutSec = this.appConfig.config?.noAgentScreenTimeout;
+      this.timeoutSec = this.appConfig.config?.noAgentScreenTimeout || 10;
     } else {
       this.redirectToAdmin();
     }
